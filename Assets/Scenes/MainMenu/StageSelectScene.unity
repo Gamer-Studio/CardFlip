@@ -206,7 +206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 410377524}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 625990826}
   - component: {fileID: 625990828}
   - component: {fileID: 625990827}
+  - component: {fileID: 625990829}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -335,6 +336,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625990825}
   m_CullTransparentMesh: 1
+--- !u!114 &625990829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625990825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 0.039215688, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1.86, y: -1.57}
+  m_UseGraphicAlpha: 1
 --- !u!1 &634253955
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +433,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 634253958}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 634253955}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &634253958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -539,7 +567,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 840326893}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
@@ -601,6 +629,7 @@ GameObject:
   - component: {fileID: 892816213}
   - component: {fileID: 892816212}
   - component: {fileID: 892816211}
+  - component: {fileID: 892816214}
   m_Layer: 5
   m_Name: Quit 2
   m_TagString: Untagged
@@ -672,13 +701,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 892816214}
+        m_TargetAssemblyTypeName: CardFlip.BacKBtn, Assembly-CSharp
+        m_MethodName: Back
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -722,6 +751,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892816209}
   m_CullTransparentMesh: 1
+--- !u!114 &892816214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892816209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e18b60ae477c7c24eb676fb32605d569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &990339243
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,6 +774,7 @@ GameObject:
   - component: {fileID: 990339244}
   - component: {fileID: 990339246}
   - component: {fileID: 990339245}
+  - component: {fileID: 990339247}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -801,6 +843,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 990339243}
   m_CullTransparentMesh: 1
+--- !u!114 &990339247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990339243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 0.039215688, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1.86, y: -1.57}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1130583168
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,7 +1020,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1288396965}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
@@ -1170,6 +1227,7 @@ GameObject:
   - component: {fileID: 1390834690}
   - component: {fileID: 1390834692}
   - component: {fileID: 1390834691}
+  - component: {fileID: 1390834693}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -1238,6 +1296,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390834689}
   m_CullTransparentMesh: 1
+--- !u!114 &1390834693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390834689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 0.039215688, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1.86, y: -1.57}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1634279273
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,6 +1482,7 @@ GameObject:
   - component: {fileID: 1701886979}
   - component: {fileID: 1701886981}
   - component: {fileID: 1701886980}
+  - component: {fileID: 1701886982}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -1477,6 +1551,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701886978}
   m_CullTransparentMesh: 1
+--- !u!114 &1701886982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701886978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 0.039215688, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1.86, y: -1.57}
+  m_UseGraphicAlpha: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
