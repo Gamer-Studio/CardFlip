@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class Card : MonoBehaviour
@@ -15,6 +16,7 @@ public class Card : MonoBehaviour
   private int id = 0;
   [SerializeField]
   private new SpriteRenderer renderer;
+
   [SerializeField]
   private Animator animator;
 }
