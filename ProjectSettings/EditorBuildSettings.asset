@@ -8,8 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Init/InitScene.unity
     guid: 14ea5bc2bfe6795418c937cfa32c0d52
-  - enabled: 1
-    path: Assets/Scenes/Game/GameScene.unity
+  - enabled: 0
+    path: Assets/Scenes/Main/MainScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 1
     path: Assets/Scenes/Menu/MenuScene.unity
@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/StageSelectScene.unity
     guid: d2f546e5837792f4cb7d80148fc21ab4
+  - enabled: 1
+    path: Assets/Scenes/Game/GameScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Result/SuccessScene.unity
     guid: 9fdc2c171b7ddb2478f72b32c852ac9c
