@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 namespace CardFlip
 {
-    public class BacKBtn : MonoBehaviour
+    public class SettingBtn : MonoBehaviour
     {
-        public void Back ()
+        public void Setting()
         {
-            SceneManager.LoadScene("MenuScene");
+            SceneManager.LoadScene("SettingScene", LoadSceneMode.Additive);
         }
     }
 }

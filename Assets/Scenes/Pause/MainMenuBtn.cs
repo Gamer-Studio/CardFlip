@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 namespace CardFlip
 {
-    public class BacKBtn : MonoBehaviour
+    public class MainMenuBtn : MonoBehaviour
     {
-        public void Back ()
+        public void MainMenu()
         {
             SceneManager.LoadScene("MenuScene");
         }
