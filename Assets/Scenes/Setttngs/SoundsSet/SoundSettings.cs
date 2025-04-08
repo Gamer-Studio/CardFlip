@@ -39,7 +39,7 @@ namespace CardFlip
         public void Start()
         {
             SoundSlider.onValueChanged.AddListener((value)=> { SoundAudioSource.volume = value; });
-            EffectSlider.onValueChanged.AddListener((value) => { SoundAudioSource.volume = value; });
+            EffectSlider.onValueChanged.AddListener((value) => { EffectdAudioSource.volume = value; });
         }
     }
 }
