@@ -51,17 +51,20 @@
 8시~9시 - TIL 작성
 
 권윤원 님
-	- PauseScene
+	- PauseScene / Pause 분기 작업
+	- 타이머 시간이 촉박할 때 경고하는 배경음악은 기존 배경음악을 빠르게 하는 것으로 의견제시
+	- 히든 스테이지 /  구현 < 진입점 버튼 구현
 
 정광훈 님
-	- FailScene
+	- FailScene 
+	- 카드 선택시 뒤집는 애니메이션 / FlipAnimation 분기 작업
 
 전창민 님 
-	- ResultScene (=> SuccessScene) < 완료
+	- ResultScene (=> SuccessScene) 
 	- StageSelectScene이랑 MenuScene 합치기 (스테이지 선택 패널로 만들어서 메뉴씬에서 스테이지 선택 버튼 눌렀을때 올라오게끔
 
 이대호 님
-	- SettingScene
+	- SettingScene / Settings 분기 작업
 
 
 피드백
