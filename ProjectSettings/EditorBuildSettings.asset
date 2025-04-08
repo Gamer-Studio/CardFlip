@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Init/InitScene.unity
     guid: 14ea5bc2bfe6795418c937cfa32c0d52
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main/MainScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 1
     path: Assets/Scenes/Menu/MenuScene.unity
     guid: 32ea918d9062d624ca248f78412b0e77
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu/StageSelectScene.unity
     guid: d2f546e5837792f4cb7d80148fc21ab4
   - enabled: 1
@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Result/SuccessScene.unity
     guid: 9fdc2c171b7ddb2478f72b32c852ac9c
+  - enabled: 1
+    path: Assets/Scenes/Pause/PauseScene.unity
+    guid: ef25edf1a23a87047b5d75b6b0f4f10a
+  - enabled: 1
+    path: Assets/Scenes/Setttngs/SettingScene.unity
+    guid: 6ba053d1487fa4b41b2f389a78f14b2f
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 239ced7f8bae80b46b57681ed7ac40fb, type: 2}
     com.unity.addressableassets: {fileID: 11400000, guid: 13d1f4ca5aa1ae94bb0fbe89a95a89e1, type: 2}
