@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 namespace CardFlip
 {
-    public class BacKBtn : MonoBehaviour
+    public class RetryBtn : MonoBehaviour
     {
-        public void Back ()
+        public void Retry() // 재시작 
         {
-            SceneManager.LoadScene("MenuScene");
+            SceneManager.LoadScene("GameScene"); // GameScene을 불러옴
         }
     }
 }
