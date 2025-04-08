@@ -14,7 +14,7 @@ namespace CardFlip
             SceneManager.UnloadSceneAsync("SettingScene");
 
             SceneManager.LoadScene("MenuScene", LoadSceneMode.Additive);
-            
+
         }
     }
 }
