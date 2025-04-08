@@ -9,7 +9,7 @@ namespace CardFlip
     {
         public void Setting()
         {
-            SceneManager.LoadScene("SettingScene", LoadSceneMode.Additive);
+            SceneManager.LoadScene("SettingScene");
         }
     }
 }

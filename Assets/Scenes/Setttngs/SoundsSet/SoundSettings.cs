@@ -35,6 +35,7 @@ namespace CardFlip
                 instance = this;
                 DontDestroyOnLoad(gameObject);
             }
+            
         }
         public void Start()
         {
