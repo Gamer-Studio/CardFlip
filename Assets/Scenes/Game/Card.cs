@@ -1,22 +1,24 @@
 using JetBrains.Annotations;
 using UnityEngine;
 
-public class Card : MonoBehaviour
+namespace CardFlip
 {
-  public int Id
+  public class Card : MonoBehaviour
   {
-    get => id;
-    set
+    public int Id
     {
-      renderer.sprite = Board.Instance.sprites[$"rtan{value}"];
-      id = value;
+      get => id;
+      set
+      {
+        renderer.sprite = Board.Instance.sprites[$"rtan{value}"];
+        id = value;
+      }
     }
+    public bool destroy = false;
+    private int id = 0;
+    [SerializeField]
+    private new SpriteRenderer renderer;
+    [SerializeField]
+    private Animator animator;
   }
-  public bool destroy = false;
-  private int id = 0;
-  [SerializeField]
-  private new SpriteRenderer renderer;
-
-  [SerializeField]
-  private Animator animator;
 }
