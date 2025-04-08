@@ -9,7 +9,7 @@ namespace CardFlip
     {
         public void Select()
         {
-            SceneManager.LoadScene("MainMenuScene");
+            SceneManager.LoadScene("StageSelectScene");
         }
     }
 }

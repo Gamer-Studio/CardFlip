@@ -668,7 +668,7 @@ GameObject:
   - component: {fileID: 1043466740}
   - component: {fileID: 1043466739}
   m_Layer: 5
-  m_Name: SandBoxModButton
+  m_Name: SettingButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -969,7 +969,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC0AC\uC6A9\uC790 \uC124\uC815"
+  m_Text: "\uC124\uC815"
 --- !u!222 &1627568377
 CanvasRenderer:
   m_ObjectHideFlags: 0
