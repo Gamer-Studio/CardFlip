@@ -51,7 +51,6 @@ namespace CardFlip
 
     private void Start()
     {
-      OpenPause = true;
     }
   }
 }
