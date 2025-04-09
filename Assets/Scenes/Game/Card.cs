@@ -12,7 +12,7 @@ namespace CardFlip
             get => id;
             set
             {
-                renderer.sprite = Board.Instance.sprites[$"rtan{value}"];
+                renderer.sprite = GameManager.Instance.sprites[$"rtan{value}"];
                 id = value;
             }
         }

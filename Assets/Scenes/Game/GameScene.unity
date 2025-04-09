@@ -395,7 +395,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1335921887}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Retry
         m_Mode: 1
@@ -801,8 +801,6 @@ GameObject:
   - component: {fileID: 1335921886}
   - component: {fileID: 1335921885}
   - component: {fileID: 1335921884}
-  - component: {fileID: 1335921887}
-  - component: {fileID: 1335921888}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -870,52 +868,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1335921887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335921883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2c692ffb98d4db458a04e8f624249cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedCard: {fileID: 0}
-  cardCount: 0
-  endText: {fileID: 742705061}
-  timeText: {fileID: 786298322}
---- !u!114 &1335921888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335921883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 7de7e99562b33104a89054b7a6bd4744, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 1335921884}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard&Mouse
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 519420031}
 --- !u!1 &1608123966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,6 +998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2093126382}
   - component: {fileID: 2093126383}
+  - component: {fileID: 2093126384}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -1082,12 +1035,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rtanRef:
-    m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_LabelString: rtan
   baseTile: {fileID: 11400000, guid: 9e1c60a6a7631b047b5d59bfc227267b, type: 2}
+  selectedCard: {fileID: 0}
+  cardCount: 0
+  camera: {fileID: 519420031}
   grid: {fileID: 930291813}
+  endText: {fileID: 742705061}
+  timeText: {fileID: 786298322}
+--- !u!114 &2093126384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093126381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 7de7e99562b33104a89054b7a6bd4744, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 1335921884}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 519420031}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
