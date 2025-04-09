@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLimit: 30
   remainAttempt: 10
-  pair: 8
+  pair: 8x
