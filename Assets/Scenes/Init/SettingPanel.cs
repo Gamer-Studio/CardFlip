@@ -27,14 +27,14 @@ namespace CardFlip
       PanelManager.Instance.OpenSetting = false;
     }
 
-    public void ChangeGlobalSound(Single value)
+    public void ChangeGlobalSound(float value)
     {
-
+      GameManager.Instance.audio.globalVolume = value;
     }
 
-    public void ChangeEffectSound(Single value)
+    public void ChangeEffectSound(float value)
     {
-
+      GameManager.Instance.audio.effectVolume = value;
     }
   }
 }

@@ -6,7 +6,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Effects Sounds
+  m_Name: SFX
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 7a2021a646091f342abcd1ac67ac97b9
   m_Children: []
@@ -25,7 +25,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BgmSounds
+  m_Name: Bgm
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: d85863c2cf69fd845bc08d340a307d32
   m_Children: []
@@ -67,7 +67,13 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 00c95abdd30eb3446901a69209f38216
+    name: Bgm
+  - guid: 419bcc434bbc3c243b7d9373581c9c75
+    name: Master
+  - guid: fdd062f3650e5b543acaabefad3bd9ec
+    name: SFX
   m_AudioMixerGroupViews:
   - guids:
     - a3d87151da25fb546a17f1e89e9cf40f

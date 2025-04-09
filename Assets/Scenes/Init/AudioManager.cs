@@ -5,12 +5,12 @@ namespace CardFlip
 {
   public class AudioManager : MonoBehaviour
   {
-    public Single globalVolume
+    public float globalVolume
     {
       get => globalSource.volume;
       set => globalSource.volume = value;
     }
-    public Single effectVolume
+    public float effectVolume
     {
       get => effectSource.volume;
       set => effectSource.volume = value;
@@ -21,8 +21,8 @@ namespace CardFlip
 
     private void Awake()
     {
-      globalVolume = PlayerPrefs.GetFloat("globalSound", 0.5f);
-      effectVolume = PlayerPrefs.GetFloat("effectSound", 0.5f);
+      globalVolume = PlayerPrefs.GetFloat("globalSound", 0.3f);
+      effectVolume = PlayerPrefs.GetFloat("effectSound", 0.3f);
     }
   }
 }
