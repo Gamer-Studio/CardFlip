@@ -26,9 +26,13 @@ namespace CardFlip
     private TextMeshProUGUI timeText;
     private int cardOrder = 0;
     private float time = 30.0f;
+    private int Pair; // Stage.cs의 pair 변수를 저장하기 위해 만듬
+    private int RemainAttempt; // Stage.cs의 remainAttempt 변수를 저장하기 위해 만듬듬
     private void Awake()
     {
       if (Instance == null) Instance = this;
+      GameManager.Instance.stageData.pair = Pair; // Stage.cs에서 pair 변수 가져옴
+      GameManager.Instance.stageData.remainAttempt = RemainAttempt; // Stage.cs에서서 remainAttempt 변수 가져옴
     }
 
     private void Start()
@@ -54,7 +58,8 @@ namespace CardFlip
     {
       var size = 4;
       var list = new List<int>();
-      for (int i = 0; i < 8; i++)
+
+      for (int i = 0; i < Pair; i++)
       {
         list.Add(i);
         list.Add(i);
@@ -63,7 +68,7 @@ namespace CardFlip
 
       for (int x = 0; x < size; x++)
       {
-        for (int y = 0; y < size; y++)
+        for (int y = 0; y < (size); y++) // y축 개수는 pair의의 반
         {
           SetCard(arr[x + y * size], new(x, y));
         }
