@@ -26,13 +26,14 @@ namespace CardFlip
             {
               if (selectedCard.Id == card.Id)
               {
+                //여기서 match.mp3 재생
                 anim.SetBool("destroy", true);
                 selectedCard.GetComponent<Animator>().SetBool("destroy", true);
                 cardCount -= 2;
-                // match
               }
               else
               {
+                //여기서 unmatch 사운드 재생
                 selectedCard.GetComponent<Animator>().SetBool("isOpen", false);
                 anim.SetBool("isOpen", false);
 

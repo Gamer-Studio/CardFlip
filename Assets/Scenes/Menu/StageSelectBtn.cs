@@ -10,7 +10,7 @@ namespace CardFlip
         public Stage stageData;
         public void StageSelect()
         {
-            if (stageData != null)
+            if (stageData == null)
             {
                 return;
             }

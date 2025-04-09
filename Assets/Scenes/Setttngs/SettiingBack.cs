@@ -10,11 +10,7 @@ namespace CardFlip
     {
         public void Back()
         {   
-            SceneManager.LoadScene("SettingScene", LoadSceneMode.Additive);
             SceneManager.UnloadSceneAsync("SettingScene");
-
-            SceneManager.LoadScene("MenuScene", LoadSceneMode.Additive);
-
         }
     }
 }

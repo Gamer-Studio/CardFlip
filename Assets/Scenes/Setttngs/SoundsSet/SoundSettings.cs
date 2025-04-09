@@ -8,39 +8,47 @@ namespace CardFlip
 {
     public class SoundSettings : MonoBehaviour
     {
-        public static SoundSettings instance;
-        AudioSource audioSource;
-        public AudioClip clip;
+        public static SoundSettings Instance;
 
-        
-        public AudioMixer audioMixer;
-
-        // 슬라이더
-        public Slider SoundSlider;
-        public Slider EffectSlider;
+        public AudioClip matchClip;
+        public AudioClip unmatchClip;
+        public AudioClip flipClip;
 
         public AudioSource SoundAudioSource;
         public AudioSource EffectdAudioSource;
-        // 볼륨 조절
-        public void SetBgmVolme()
-        {
-            // 로그 연산 값 전달
-       
-        }
+        public AudioSource MatchAudioSource;
+
+        private float effectSoundCooldown = 1f;
+        private float lastEffectSoundTime = 0f;
 
         private void Awake()
         {
-            if (instance = null)
+            if (Instance == null)
             {
-                instance = this;
+                Instance = this;
                 DontDestroyOnLoad(gameObject);
             }
-            
+            else
+            {
+                Destroy(gameObject);
+            }
         }
-        public void Start()
+        public void BGMSetting(float value)
         {
-            SoundSlider.onValueChanged.AddListener((value)=> { SoundAudioSource.volume = value; });
-            EffectSlider.onValueChanged.AddListener((value) => { EffectdAudioSource.volume = value; });
+            SoundAudioSource.volume = value;
+        }
+
+        public void EffectSetting(float value)
+        {
+            EffectdAudioSource.volume = value;
+            MatchAudioSource.volume = value;
+            if (Time.time - lastEffectSoundTime >= effectSoundCooldown)
+            {
+                EffectdAudioSource.PlayOneShot(flipClip);
+                MatchAudioSource.PlayOneShot(matchClip);
+
+                lastEffectSoundTime = Time.time;
+            }
         }
     }
 }
