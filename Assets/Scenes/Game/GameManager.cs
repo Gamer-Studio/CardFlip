@@ -9,10 +9,10 @@ namespace CardFlip
   {
     public static GameManager Instance { get; private set; }
     //   여기서는 스테이지 정보 전달받는 변수
-    public Stage stageData = null;
+    public static Stage stageData = null;
     public Card selectedCard = null;
     public int cardCount = 0;
-    private float time = 0;
+    private float time = 30.0f;
     [SerializeField]
     private GameObject endText;
     [SerializeField]
@@ -20,29 +20,29 @@ namespace CardFlip
     private new Camera camera;
     private void Awake()
     {
-            if (Instance == null)
-            {
-                Instance = this;
-                DontDestroyOnLoad(gameObject);  //씬 전환 시 싱글톤 유지
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
+      if (Instance == null)
+      {
+        Instance = this;
+        DontDestroyOnLoad(gameObject);  //씬 전환 시 싱글톤 유지
+      }
+      else
+      {
+        Destroy(gameObject);
+      }
 
       camera = Camera.main;
     }
 
     private void Update()
     {
-      if (time < 30)
+      if (time > 0) // 0초가 아닐 때
       {
-        time += Time.deltaTime;
+        time -= Time.deltaTime; // 시간 감소
         timeText.text = time.ToString("N2");
       }
       else
       {
-        timeText.text = 30f.ToString("N2");
+        timeText.text = 0f.ToString("N2"); // 끝나면 화면에 0초로 표시
         GameOver();
       }
     }
@@ -94,7 +94,6 @@ namespace CardFlip
     {
       endText.SetActive(true);
       Time.timeScale = 0;
-
     }
 
     public void Retry()
