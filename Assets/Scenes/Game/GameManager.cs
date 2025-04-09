@@ -12,7 +12,7 @@ namespace CardFlip
     public static Stage stageData = null;
     public Card selectedCard = null;
     public int cardCount = 0;
-    private float time = 0;
+    private float time = 30.0f;
     [SerializeField]
     private GameObject endText;
     [SerializeField]
@@ -35,14 +35,14 @@ namespace CardFlip
 
     private void Update()
     {
-      if (time < 30)
+      if (time > 0) // 0초가 아닐 때
       {
-        time += Time.deltaTime;
+        time -= Time.deltaTime; // 시간 감소
         timeText.text = time.ToString("N2");
       }
       else
       {
-        timeText.text = 30f.ToString("N2");
+        timeText.text = 0f.ToString("N2"); // 끝나면 화면에 0초로 표시
         GameOver();
       }
     }
@@ -94,7 +94,6 @@ namespace CardFlip
     {
       endText.SetActive(true);
       Time.timeScale = 0;
-
     }
 
     public void Retry()
