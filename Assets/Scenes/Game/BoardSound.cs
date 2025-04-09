@@ -5,12 +5,7 @@ namespace CardFlip
 {
   public partial class Board
   {
-    AudioSource audioSource;
-
-    public AudioClip matchClip;
-    public AudioClip unmatchClip;
-
-        private void OnClick(InputValue value)
+    private void OnClick(InputValue value)
     {
       if (value.Get<float>() == 1)
       {
@@ -31,15 +26,14 @@ namespace CardFlip
             {
               if (selectedCard.Id == card.Id)
               {
-                audioSource.PlayOneShot(matchClip);
+                //여기서 match.mp3 재생
                 anim.SetBool("destroy", true);
                 selectedCard.GetComponent<Animator>().SetBool("destroy", true);
                 cardCount -= 2;
-                // match
               }
               else
               {
-                audioSource.PlayOneShot(unmatchClip);
+                //여기서 unmatch 사운드 재생
                 selectedCard.GetComponent<Animator>().SetBool("isOpen", false);
                 anim.SetBool("isOpen", false);
 

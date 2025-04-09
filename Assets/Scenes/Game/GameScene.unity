@@ -1034,8 +1034,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7fff2e26c908146aaabd58c3e35694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rtanRef:
-    m_LabelString: rtan
   baseTile: {fileID: 11400000, guid: 9e1c60a6a7631b047b5d59bfc227267b, type: 2}
   selectedCard: {fileID: 0}
   cardCount: 0
@@ -1043,6 +1041,9 @@ MonoBehaviour:
   grid: {fileID: 930291813}
   endText: {fileID: 742705061}
   timeText: {fileID: 786298322}
+  flip: {fileID: 8300000, guid: 420d05abdc2051346953a694793378b5, type: 3}
+  matchClip: {fileID: 8300000, guid: fc3b3007ecabd9643a5d277d91087115, type: 3}
+  unmatchClip: {fileID: 8300000, guid: fc3b3007ecabd9643a5d277d91087115, type: 3}
 --- !u!114 &2093126384
 MonoBehaviour:
   m_ObjectHideFlags: 0
