@@ -26,7 +26,7 @@ namespace CardFlip
     [SerializeField]
     private TextMeshProUGUI timeText;
     [SerializeField]
-    private Text remainAttempTXT; // 남은기회 txt
+    private Text count; // 남은기회 txt
     
     private int cardOrder = 0;
     private float time = 30.0f;
@@ -46,9 +46,7 @@ namespace CardFlip
     }
 
     private void Update()
-    {
-      remainAttempTXT.text = RemainAttempt.ToString(); // 화면에 출력
-      
+    { 
       if (time > 0) // 0초가 아닐 때
       {
         time -= Time.deltaTime; // 시간 감소
@@ -92,6 +90,7 @@ namespace CardFlip
       }
 
       cardCount = arr.Length;
+      count.text = RemainAttempt.ToString(); // 화면에 출력
     }
 
     public void GameOver()
