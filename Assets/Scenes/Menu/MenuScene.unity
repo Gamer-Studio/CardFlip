@@ -284,13 +284,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 61198572}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 61198577}
+        m_TargetAssemblyTypeName: CardFlip.StageSelectBtn, Assembly-CSharp
+        m_MethodName: StageSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8d1e9bb8484694ead402fd57f8a128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 0}
+  stageData: {fileID: 11400000, guid: 17501556257a4f64c9ba822e0e40a399, type: 2}
 --- !u!1 &242104256
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,13 +642,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 360747301}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 360747306}
+        m_TargetAssemblyTypeName: CardFlip.StageSelectBtn, Assembly-CSharp
+        m_MethodName: StageSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -704,7 +704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8d1e9bb8484694ead402fd57f8a128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 0}
+  stageData: {fileID: 11400000, guid: 96c077d77f600924587e962730385623, type: 2}
 --- !u!1 &418968294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,13 +1122,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 761182465}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 761182470}
+        m_TargetAssemblyTypeName: CardFlip.StageSelectBtn, Assembly-CSharp
+        m_MethodName: StageSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1184,7 +1184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8d1e9bb8484694ead402fd57f8a128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 0}
+  stageData: {fileID: 11400000, guid: 491a5fb94860e9644bd7e20efaeae782, type: 2}
 --- !u!1 &797175690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,13 +1269,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 797175690}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 797175695}
+        m_TargetAssemblyTypeName: CardFlip.StageSelectBtn, Assembly-CSharp
+        m_MethodName: StageSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
