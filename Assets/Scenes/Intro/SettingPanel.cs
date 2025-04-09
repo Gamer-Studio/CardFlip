@@ -32,6 +32,11 @@ namespace CardFlip
       GameManager.Instance.audio.globalVolume = value;
     }
 
+    public void ChangeBackgroundSound(float value)
+    {
+
+    }
+
     public void ChangeEffectSound(float value)
     {
       GameManager.Instance.audio.effectVolume = value;
