@@ -6,6 +6,7 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace CardFlip
@@ -24,10 +25,14 @@ namespace CardFlip
     private GameObject endText;
     [SerializeField]
     private TextMeshProUGUI timeText;
+    [SerializeField]
+    private Text count; // 남은기회 txt
+    
     private int cardOrder = 0;
     private float time = 30.0f;
     private int Pair; // Stage.cs의 pair 변수를 저장하기 위해 만듬
-    private int RemainAttempt; // Stage.cs의 remainAttempt 변수를 저장하기 위해 만듬듬
+    private int RemainAttempt; // Stage.cs의 remainAttempt 변수를 저장하기 위해 만듬
+    
     private void Awake()
     {
       if (Instance == null) Instance = this;
@@ -41,7 +46,7 @@ namespace CardFlip
     }
 
     private void Update()
-    {
+    { 
       if (time > 0) // 0초가 아닐 때
       {
         time -= Time.deltaTime; // 시간 감소
@@ -85,6 +90,7 @@ namespace CardFlip
       }
 
       cardCount = arr.Length;
+      count.text = RemainAttempt.ToString(); // 화면에 출력
     }
 
     public void GameOver()
@@ -97,6 +103,7 @@ namespace CardFlip
     {
       Time.timeScale = 1;
       SceneManager.LoadScene("MainScene");
+      RemainAttempt -= 1; // 재시작시 남은기회 -1
     }
 
     public Card SetCard(int id, Vector3Int position)
