@@ -65,12 +65,22 @@ namespace CardFlip
         list.Add(i);
       }
       var arr = list.OrderBy(_ => Random.Range(0, 7)).ToArray();
-
+      
       for (int x = 0; x < size; x++)
       {
-        for (int y = 0; y < (size); y++) // y축 개수는 pair의의 반
+        for (int y = 0; y < (Pair / 2); y++) // y축 개수는 pair의 반
         {
-          SetCard(arr[x + y * size], new(x, y));
+          for(int z = 0; z < size; z++)
+          {
+            if (arr[z] != -1) // 배열 안에 값이 있을 때때
+            {
+              SetCard(arr[x + y * size], new(x, y)); // 배열 안에 값이 존재할 때 카드생성
+            }
+            else
+            {
+              arr[z] = -1; // 배열의 남은 공간을 -1로 채움
+            }
+          }
         }
       }
 

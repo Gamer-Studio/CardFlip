@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2c692ffb98d4db458a04e8f624249cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 0}
+  stageData: {fileID: 11400000, guid: a48163a5b93420b4faff5e203ba5f6f9, type: 2}
   rtanRef:
     m_LabelString: rtan
 --- !u!4 &406947717
