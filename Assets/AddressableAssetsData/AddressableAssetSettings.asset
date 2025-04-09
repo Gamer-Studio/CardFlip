@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 807553073d146f94ab51a56516099da6
   m_currentHash:
     serializedVersion: 2
-    Hash: 4905bcec465385bd373a9741edb7b73a
+    Hash: f43571c6b2fcf29522c6b403493475e4
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_LabelTable:
     m_LabelNames:
     - default
-    - rtan
+    - card
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: a483f4a39a6cdad48ace8fb736a600d9, type: 2}

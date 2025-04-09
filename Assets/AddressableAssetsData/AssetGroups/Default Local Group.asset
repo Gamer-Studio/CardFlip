@@ -21,49 +21,103 @@ MonoBehaviour:
     m_Address: Assets/Arts/Images/rtan0.png
     m_ReadOnly: 0
     m_SerializedLabels:
-    - rtan
+    - card
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e0d4ad6a6c3c3c84ebb7897c0dc9891c
     m_Address: Assets/Arts/Images/rtan1.png
     m_ReadOnly: 0
     m_SerializedLabels:
-    - rtan
+    - card
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f6c104cc9183f4b4687cf4f223229d4a
     m_Address: Assets/Arts/Images/rtan2.png
     m_ReadOnly: 0
     m_SerializedLabels:
-    - rtan
+    - card
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7984dc31a4e8e7e4aae021c188068706
     m_Address: Assets/Arts/Images/rtan3.png
     m_ReadOnly: 0
     m_SerializedLabels:
-    - rtan
+    - card
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8b21735fb1037914ea9aaec7308ee41e
     m_Address: Assets/Arts/Images/rtan4.png
     m_ReadOnly: 0
     m_SerializedLabels:
-    - rtan
+    - card
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bfbd8ebdea90cce48b370ff6ff89f9e9
     m_Address: Assets/Arts/Images/rtan5.png
     m_ReadOnly: 0
     m_SerializedLabels:
-    - rtan
+    - card
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d5fec5da61fe7b14b813c08d2ff2f8ae
     m_Address: Assets/Arts/Images/rtan6.png
     m_ReadOnly: 0
     m_SerializedLabels:
-    - rtan
+    - card
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 386d0b5ff838732468cab9feac43eb61
     m_Address: Assets/Arts/Images/rtan7.png
     m_ReadOnly: 0
     m_SerializedLabels:
-    - rtan
+    - card
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7c78c6ad02f48345a16c3c59819c6f5
+    m_Address: "Assets/Arts/Images/\uAD8C\uC6A9\uC6B4.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - card
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec6ce9452c57dc64aa6c67acadf95eb8
+    m_Address: "Assets/Arts/Images/\uAE40\uC815\uC778.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - card
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32e4e9f1937833a40976563c365804e6
+    m_Address: "Assets/Arts/Images/\uC774\uB300\uD638.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - card
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dfdfa0a8564a9d747aa4948eea725391
+    m_Address: "Assets/Arts/Images/\uC804\uCC3D\uBBFC.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - card
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 44ca58a42119822459909b6a520de0ac
+    m_Address: "Assets/Arts/Images/\uC815\uAD11\uD6C8.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - card
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3143b32ba60ad324e962f4476687a77f
+    m_Address: Assets/Arts/Images/card0.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - card
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b409ce160001c624c97da7d1b3002759
+    m_Address: Assets/Arts/Images/card2.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - card
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 202946cd8039eb44aa08d283e636f392
+    m_Address: Assets/Arts/Images/card1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - card
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c62a68b19a17ff4682f86972e05677f
+    m_Address: Assets/Arts/Images/card3 1.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - card
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 38c21cd6211a94341ae02ca5ccf7f67e, type: 2}
