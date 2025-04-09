@@ -31,8 +31,8 @@ namespace CardFlip
     private void Awake()
     {
       if (Instance == null) Instance = this;
-      GameManager.Instance.stageData.pair = Pair; // Stage.cs에서 pair 변수 가져옴
-      GameManager.Instance.stageData.remainAttempt = RemainAttempt; // Stage.cs에서서 remainAttempt 변수 가져옴
+      Pair = GameManager.Instance.stageData.pair; // Stage.cs에서 pair 변수 가져옴
+      RemainAttempt = GameManager.Instance.stageData.remainAttempt; // Stage.cs에서서 remainAttempt 변수 가져옴
     }
 
     private void Start()
