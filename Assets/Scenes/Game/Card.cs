@@ -46,7 +46,6 @@ namespace CardFlip
             }
 
             transform.position = pos;
-            animator.SetBool("isDeployed", true);
         }
     }
 }
