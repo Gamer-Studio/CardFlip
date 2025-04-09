@@ -10,7 +10,7 @@ using Random = UnityEngine.Random;
 
 namespace CardFlip
 {
-  public class Board : MonoBehaviour
+  public partial class Board : MonoBehaviour
   {
     public static Board Instance { get; private set; }
     public RuleTile baseTile;
