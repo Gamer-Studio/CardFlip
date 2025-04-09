@@ -9,6 +9,7 @@ namespace CardFlip
   {
     public static GameManager Instance { get; private set; }
     //   여기서는 스테이지 정보 전달받는 변수
+    public static Stage stageData = null;
     public Card selectedCard = null;
     public int cardCount = 0;
     private float time = 0;
