@@ -8,27 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Init/InitScene.unity
     guid: 14ea5bc2bfe6795418c937cfa32c0d52
-  - enabled: 0
-    path: Assets/Scenes/Main/MainScene.unity
-    guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 1
     path: Assets/Scenes/Menu/MenuScene.unity
     guid: 32ea918d9062d624ca248f78412b0e77
-  - enabled: 0
-    path: Assets/Scenes/Menu/StageSelectScene.unity
-    guid: d2f546e5837792f4cb7d80148fc21ab4
   - enabled: 1
     path: Assets/Scenes/Game/GameScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Result/SuccessScene.unity
     guid: 9fdc2c171b7ddb2478f72b32c852ac9c
-  - enabled: 1
-    path: Assets/Scenes/Pause/PauseScene.unity
-    guid: ef25edf1a23a87047b5d75b6b0f4f10a
-  - enabled: 1
-    path: Assets/Scenes/Setttngs/SettingScene.unity
-    guid: 6ba053d1487fa4b41b2f389a78f14b2f
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 2e65c63a8edd5554d9b3ebfe2f739afa, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 1a033610be476bf4ea96667f9a07c8d6, type: 2}
