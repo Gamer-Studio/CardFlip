@@ -1121,13 +1121,9 @@ MonoBehaviour:
   grid: {fileID: 930291813}
   endText: {fileID: 742705061}
   timeText: {fileID: 786298322}
-<<<<<<< Updated upstream
   flip: {fileID: 8300000, guid: 420d05abdc2051346953a694793378b5, type: 3}
   matchClip: {fileID: 8300000, guid: fc3b3007ecabd9643a5d277d91087115, type: 3}
   unmatchClip: {fileID: 8300000, guid: fc3b3007ecabd9643a5d277d91087115, type: 3}
-=======
-  remainAttempTXT: {fileID: 842457109}
->>>>>>> Stashed changes
 --- !u!114 &2093126384
 MonoBehaviour:
   m_ObjectHideFlags: 0

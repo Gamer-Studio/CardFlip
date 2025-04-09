@@ -13,10 +13,5 @@ MonoBehaviour:
   m_Name: Stage_1
   m_EditorClassIdentifier: 
   timeLimit: 30
-<<<<<<< Updated upstream
-  remainAttempt: 10
-  pair: 8
-=======
   remainAttempt: 5
-  pair: 4
->>>>>>> Stashed changes
+  pair: 8
