@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.SceneManagement;
 
 namespace CardFlip
@@ -11,10 +12,18 @@ namespace CardFlip
         public bool loaded = false;
         [SerializeField]
         private TMP_Text introText;
+        [SerializeField]
+        private AssetLabelReference rtanRef;
         private void Awake()
         {
-            // 여기에 설정, 일시정지 다이얼로그 DDOL로 인스턴스되게끔 구현
-            // 인스턴스완료했을 때 텍스트를 바꾸고 터치시 게임 진입 구현
+            // 초기화 스크립트에서 어드레서블 에셋 로딩하기기
+            var sprites = GameManager.Instance.sprites;
+            Addressables.LoadAssetsAsync<Sprite>(rtanRef, sprite =>
+            {
+                sprites.Add(sprite.name, sprite);
+            }).WaitForCompletion();
+
+            // 게임 로딩을 완료했을 때 텍스트를 바꾸고 터치시 게임 진입 구현
             introText.GetComponent<Animator>().SetBool("Blinking", true);
             loaded = true;
             introText.text = "Touch To Start!";
