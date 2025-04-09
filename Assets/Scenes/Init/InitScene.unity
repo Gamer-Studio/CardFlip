@@ -486,6 +486,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageData: {fileID: 0}
+  rtanRef:
+    m_LabelString: rtan
 --- !u!4 &406947717
 Transform:
   m_ObjectHideFlags: 0

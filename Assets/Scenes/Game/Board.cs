@@ -13,8 +13,6 @@ namespace CardFlip
   public class Board : MonoBehaviour
   {
     public static Board Instance { get; private set; }
-    public AssetLabelReference rtanRef;
-    public Dictionary<string, Sprite> sprites = new();
     public RuleTile baseTile;
     public Card selectedCard = null;
     public int cardCount = 0;
@@ -31,11 +29,6 @@ namespace CardFlip
     private void Awake()
     {
       if (Instance == null) Instance = this;
-
-      var loadSprites = Addressables.LoadAssetsAsync<Sprite>(rtanRef, sprite =>
-      {
-        sprites.Add(sprite.name, sprite);
-      }).WaitForCompletion();
     }
 
     private void Start()
