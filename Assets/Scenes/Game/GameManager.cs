@@ -9,7 +9,7 @@ namespace CardFlip
   {
     public static GameManager Instance { get; private set; }
     //   여기서는 스테이지 정보 전달받는 변수
-    public static Stage stageData = null;
+    public Stage stageData = null;
     public Card selectedCard = null;
     public int cardCount = 0;
     private float time = 0;
@@ -20,7 +20,15 @@ namespace CardFlip
     private new Camera camera;
     private void Awake()
     {
-      if (Instance == null) Instance = this;
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);  //씬 전환 시 싱글톤 유지
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
 
       camera = Camera.main;
     }
