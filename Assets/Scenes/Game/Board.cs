@@ -15,6 +15,7 @@ namespace CardFlip
     public RuleTile baseTile;
     [SerializeField]
     private Tilemap grid;
+    int cardOrder = 0;
     private void Awake()
     {
       if (Instance == null) Instance = this;
@@ -57,6 +58,8 @@ namespace CardFlip
       grid.SetTile(position, baseTile);
       var obj = grid.GetInstantiatedObject(position);
       obj.GetComponent<Card>().Id = id;
+      obj.GetComponent<Card>().order = cardOrder;
+      cardOrder++;
 
       return obj.GetComponent<Card>();
     }
