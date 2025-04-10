@@ -69,7 +69,8 @@ namespace CardFlip
 
     private void StartGame()
     {
-      var size = 4;
+      var sizeX = 4;
+    var sizeY = Pair / 2;
       var list = new List<int>();
 
       for (int i = 0; i < Pair; i++)
@@ -77,15 +78,18 @@ namespace CardFlip
         list.Add(i);
         list.Add(i);
       }
-      var arr = list.OrderBy(_ => Random.Range(0, Pair)).ToArray();
-      
-      for (int x = 0; x < size; x++)
-      {
-        for (int y = 0; y < (Pair / 2); y++) // y축 개수는 pair의 반
+      var arr = list.OrderBy(_ => Random.Range(0, 7)).ToArray();
+    int index = 0;
+    for (int y = 0; y < sizeY; y++)
+    {
+        for (int x = 0; x < sizeX; x++)
         {
-              SetCard(arr[x + y], new(x, y)); // 배열 안에 값이 존재할 때 카드생성
+            if (index >= arr.Length) break;
+
+            SetCard(arr[index], new Vector3Int(x, y));
+            index++;
         }
-      }
+    }
       cardCount = arr.Length;
       count.text = RemainAttempt.ToString(); // 화면에 출력
     }
