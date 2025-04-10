@@ -1,28 +1,64 @@
 using System;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace CardFlip
 {
   public class AudioManager : MonoBehaviour
   {
+    // 0~100 값을 가질 수 있는 전역 볼륨 프로퍼티입니다.
+    // 기본값은 80입니다.
     public float globalVolume
     {
-      get => globalSource.volume;
-      set => globalSource.volume = value;
+      get
+      {
+        if (audioMixer.GetFloat("Master", out var volume)) return volume + 80;
+        else return 0;
+      }
+      set
+      {
+        audioMixer.SetFloat("Master", value - 80);
+      }
     }
+
+    // 0~100값을 가질 수 있는 배경음음 볼륨 프로퍼티입니다.
+    // 기본값은 80입니다.
+    public float BgmVolume
+    {
+      get
+      {
+        if (audioMixer.GetFloat("Bgm", out var volume)) return volume + 80;
+        else return 0;
+      }
+      set
+      {
+        audioMixer.SetFloat("Bgm", value - 80);
+      }
+    }
+
+    // 0~100값을 가질 수 있는 효과음 볼륨 프로퍼티입니다.
+    // 기본값은 100입니다.
     public float effectVolume
     {
-      get => effectSource.volume;
-      set => effectSource.volume = value;
+      get
+      {
+        if (audioMixer.GetFloat("SFX", out var volume)) return volume + 80;
+        else return 0;
+      }
+      set
+      {
+        audioMixer.SetFloat("SFX", value - 80);
+      }
     }
 
     [SerializeField]
-    private AudioSource globalSource, effectSource;
+    private AudioMixer audioMixer;
 
     private void Awake()
     {
-      globalVolume = PlayerPrefs.GetFloat("globalSound", 0.3f);
-      effectVolume = PlayerPrefs.GetFloat("effectSound", 0.3f);
+      globalVolume = PlayerPrefs.GetFloat("globalVolume", 80f) - 80f;
+      globalVolume = PlayerPrefs.GetFloat("bgmVolume", 80f) - 80f;
+      effectVolume = PlayerPrefs.GetFloat("effectVolume", 100f) - 80f;
     }
   }
 }

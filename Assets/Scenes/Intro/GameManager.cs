@@ -1,9 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 namespace CardFlip
 {

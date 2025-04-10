@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,21 +6,20 @@ namespace CardFlip
   public class SettingPanel : MonoBehaviour
   {
     [SerializeField]
-    private Slider globalSoundSlider, effectSoundSlider;
+    private Slider globalSoundSlider, bgmSoundSlider, effectSoundSlider;
     private void OnEnable()
     {
-      globalSoundSlider.value = PlayerPrefs.GetFloat("globalSound", 0.5f);
-      effectSoundSlider.value = PlayerPrefs.GetFloat("effectSound", 0.5f);
-    }
-
-    private void OnDisable()
-    {
-      PlayerPrefs.GetFloat("globalSound", globalSoundSlider.value);
-      PlayerPrefs.GetFloat("effectSound", effectSoundSlider.value);
+      Debug.Log("load");
+      globalSoundSlider.value = PlayerPrefs.GetFloat("globalVolume", 80f);
+      bgmSoundSlider.value = PlayerPrefs.GetFloat("bgmVolume", 80f);
+      effectSoundSlider.value = PlayerPrefs.GetFloat("effectVolume", 100f);
     }
 
     public void Back()
     {
+      PlayerPrefs.SetFloat("globalVolume", globalSoundSlider.value);
+      PlayerPrefs.SetFloat("bgmVolume", bgmSoundSlider.value);
+      PlayerPrefs.SetFloat("effectVolume", effectSoundSlider.value);
       PanelManager.Instance.OpenSetting = false;
     }
 
@@ -34,7 +30,7 @@ namespace CardFlip
 
     public void ChangeBackgroundSound(float value)
     {
-
+      GameManager.Instance.audio.BgmVolume = value;
     }
 
     public void ChangeEffectSound(float value)

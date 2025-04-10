@@ -36,7 +36,7 @@ namespace CardFlip
 
         public void JoinMenu()
         {
-            if (loaded) SceneManager.LoadScene("GameScene");
+            if (loaded) SceneManager.LoadScene("MenuScene");
         }
     }
 }
