@@ -14,8 +14,6 @@ namespace CardFlip
     private GameObject MenuPanel, stageSelectPanel;
     [SerializeField]
     private List<GameObject> stageButtons;
-
-    private string key = "bestStage";
     private int bestStage;
 
     // MenuPanel 코드
@@ -24,29 +22,27 @@ namespace CardFlip
       MenuPanel.SetActive(false);
       stageSelectPanel.SetActive(true);
 
-      if (!PlayerPrefs.HasKey(key))
-      {
-        PlayerPrefs.SetInt(key, 1);
-      }
-      bestStage = PlayerPrefs.GetInt(key);
+      // nameof로 키를 변수의 이름으로 사용하게 했어요.
+      // 두번째 매개변수로 해당 값이 저장되어있지않을 때 가져올 값을 정의했어요.
+      bestStage = PlayerPrefs.GetInt(nameof(bestStage), 1);
 
       for (int i = 0; i < stageButtons.Count; ++i)
       {
-        GameObject btnObj = stageButtons[i];
+        var btnObj = stageButtons[i];
 
         bool isCleared = (i + 2) <= bestStage;
         btnObj.SetActive(true);
 
-        Transform lockIcon = btnObj.transform.Find("LockIcon");
+        var lockIcon = btnObj.transform.Find("LockIcon");
         if (lockIcon != null)
           lockIcon.gameObject.SetActive(!isCleared);
 
-        Transform overlay = btnObj.transform.Find("DarkOverlay");
+        var overlay = btnObj.transform.Find("DarkOverlay");
         if (overlay != null)
           overlay.gameObject.SetActive(!isCleared);
 
-        var btn = btnObj.GetComponent<Button>();
-        if (btn != null)
+        // TryGetComponent를 통해 버튼 컴포넌트를 가져오고, 정상적으로 가져왔을 시 바로 실행하게 했어요.
+        if (btnObj.TryGetComponent<Button>(out var btn))
           btn.interactable = isCleared;
       }
     }
