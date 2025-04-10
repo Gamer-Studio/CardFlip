@@ -32,6 +32,7 @@ namespace CardFlip
 
     private int cardOrder = 0;
     private float timeWait = 0.07f;
+    // 남은 시간간
     private float time = 30.0f;
     // 남은 시도횟수
     private int remainAttempt;
@@ -130,6 +131,51 @@ namespace CardFlip
       //yield return new WaitForSeconds(timeWait * cardOrder);
       yield return new WaitForSeconds(timeWait * GameManager.Instance.stageData.pair * 2);
       isStarted = true;
+    }
+
+    private void OnClick(InputValue value)
+    {
+      if (value.Get<float>() == 1)
+      {
+        var pos = camera.ScreenToWorldPoint(Input.mousePosition);
+        var hits = Physics2D.RaycastAll(pos, Vector2.zero, 0f);
+
+        foreach (var hit in hits)
+        {
+          if (hit.collider.TryGetComponent<Card>(out var card) && card != selectedCard && !card.destroy)
+          {
+            var anim = card.GetComponent<Animator>();
+            anim.SetTrigger("Open");
+            anim.SetBool("isOpen", true);
+
+            // 카드 선택했을 때 동작
+            if (selectedCard == null) selectedCard = card;
+            else
+            {
+              if (selectedCard.Id == card.Id)
+              {
+                //여기서 match.mp3 재생
+                anim.SetBool("destroy", true);
+                selectedCard.GetComponent<Animator>().SetBool("destroy", true);
+                cardCount -= 2;
+              }
+              else
+              {
+                //여기서 unmatch 사운드 재생
+                selectedCard.GetComponent<Animator>().SetBool("isOpen", false);
+                anim.SetBool("isOpen", false);
+                countText.text = (--remainAttempt).ToString();
+
+              }
+              selectedCard = null;
+            }
+
+            break;
+          }
+        }
+
+        if (cardCount <= 0) GameOver();
+      }
     }
   }
 }
