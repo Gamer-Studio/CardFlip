@@ -20,9 +20,9 @@ namespace CardFlip
       remainAttemptResultText.text = remainAttempt.ToString();
       remainTimeResultText.text = time.ToString("N2");
 
-      var current = GameManager.Instance.stageIndex + 1;
-      // var best = PlayerPrefs.GetInt("bestStage", 1);
-      PlayerPrefs.SetInt("bestStage", current + 1);
+      var current = GameManager.Instance.stageIndex;
+      var best = PlayerPrefs.GetInt("bestStage", 1);
+      if (current >= best - 1) PlayerPrefs.SetInt("bestStage", current + 1);
 
       nextStageButton.SetActive(current <= GameManager.Instance.stageDataList.Count);
     }
