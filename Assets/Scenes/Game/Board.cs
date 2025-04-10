@@ -30,6 +30,7 @@ namespace CardFlip
     [SerializeField]
     private TextMeshProUGUI countText;
 
+    private Stage stageData;
     private int cardOrder = 0;
     private float timeWait = 0.07f;
     // 남은 시간간
@@ -42,8 +43,9 @@ namespace CardFlip
     private void Awake()
     {
       if (Instance == null) Instance = this;
+      stageData = GameManager.Instance.stageDataList[GameManager.Instance.stageIndex];
       timeText.text = time.ToString("N2");
-      remainAttempt = GameManager.Instance.stageData.remainAttempt;
+      remainAttempt = stageData.remainAttempt;
     }
 
     private void Start()
@@ -71,8 +73,6 @@ namespace CardFlip
 
     private void StartGame()
     {
-      var stageData = GameManager.Instance.stageData;
-
       var sizeX = 4;
       var sizeY = stageData.pair / 2;
       var list = new List<int>();
@@ -129,7 +129,7 @@ namespace CardFlip
     private IEnumerator CardSettingComplete()
     {
       //yield return new WaitForSeconds(timeWait * cardOrder);
-      yield return new WaitForSeconds(timeWait * GameManager.Instance.stageData.pair * 2);
+      yield return new WaitForSeconds(timeWait * stageData.pair * 2);
       isStarted = true;
     }
 
