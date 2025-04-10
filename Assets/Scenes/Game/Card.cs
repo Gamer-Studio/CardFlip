@@ -34,18 +34,22 @@ namespace CardFlip
 
         IEnumerator MoveToTarget()
         {
+            float timeWait = 0.07f;  //유지 보수 측면을 위한 timeWait 변수 추가가
+
             float elapsed = 0f;
-            float delay = order * 0.2f;
+            float delay = order * timeWait;
             yield return new WaitForSeconds(delay);
 
-            while (elapsed < 0.3f)
+            while (elapsed <= timeWait)
             {
-                transform.position = Vector3.Lerp(Vector3.zero, pos, elapsed / 0.3f);
+                transform.position = Vector3.Lerp(Vector3.zero, pos, elapsed / timeWait);
                 elapsed += Time.deltaTime;
                 yield return null;
             }
 
             transform.position = pos;
+            GetComponent<BoxCollider2D>().enabled = true; //카드 prefab의 boxcollider2d를 비활성화 한 후 배치가 끝나면 활성화
+
         }
     }
 }
