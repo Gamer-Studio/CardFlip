@@ -14,6 +14,7 @@ namespace CardFlip
     private GameObject MenuPanel, stageSelectPanel;
     [SerializeField]
     private List<GameObject> stageButtons;
+    private string bestStageName = "bestStage";
     private int bestStage;
 
     // MenuPanel 코드
@@ -24,7 +25,8 @@ namespace CardFlip
 
       // nameof로 키를 변수의 이름으로 사용하게 했어요.
       // 두번째 매개변수로 해당 값이 저장되어있지않을 때 가져올 값을 정의했어요.
-      bestStage = PlayerPrefs.GetInt(nameof(bestStage), 1);
+      bestStage = PlayerPrefs.GetInt(bestStageName, 1);
+      Debug.Log(bestStage);
 
       for (int i = 0; i < stageButtons.Count; ++i)
       {

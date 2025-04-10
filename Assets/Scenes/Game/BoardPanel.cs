@@ -20,22 +20,22 @@ namespace CardFlip
       remainAttemptResultText.text = remainAttempt.ToString();
       remainTimeResultText.text = time.ToString("N2");
 
-      var current = GameManager.Instance.stageIndex;
-      var best = PlayerPrefs.GetInt("bestStage", 1);
-      if (current >= best) PlayerPrefs.SetInt("bestStage", current + 1);
+      var current = GameManager.Instance.stageIndex + 1;
+      // var best = PlayerPrefs.GetInt("bestStage", 1);
+      PlayerPrefs.SetInt("bestStage", current + 1);
 
       nextStageButton.SetActive(current <= GameManager.Instance.stageDataList.Count);
     }
 
     public void Retry()
     {
-      SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
+      SceneManager.LoadSceneAsync("GameScene");
     }
 
     public void NextStage()
     {
       GameManager.Instance.stageIndex++;
-      SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
+      SceneManager.LoadSceneAsync("GameScene");
     }
 
     // failPanel 구현
@@ -50,7 +50,7 @@ namespace CardFlip
 
     public void BackToMenu()
     {
-      SceneManager.LoadScene("MenuScene", LoadSceneMode.Single);
+      SceneManager.LoadSceneAsync("MenuScene");
     }
   }
 }

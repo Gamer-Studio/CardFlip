@@ -72,7 +72,7 @@ namespace CardFlip
         else
         {
           timeText.text = 0f.ToString("N2"); // 끝나면 화면에 0초로 표시
-          if (!finish) GameOver();
+          if (!finish) Fail();
         }
       }
     }
@@ -102,11 +102,6 @@ namespace CardFlip
       }
       cardCount = arr.Length;
       countText.text = remainAttempt.ToString(); // 화면에 출력
-    }
-
-    public void GameOver()
-    {
-      Fail();
     }
 
     public Card SetCard(int id, Vector3Int position)
@@ -159,7 +154,6 @@ namespace CardFlip
             {
               StartCoroutine(CheckMatch(selectedCard, card)); // 카드가 같은지 비교
               selectedCard = null;
-              Debug.Log(cardCount);
               if (cardCount <= 2)
               {
                 finish = true;
@@ -171,7 +165,10 @@ namespace CardFlip
           }
         }
 
-        if (cardCount <= 0) GameOver();
+        if (remainAttempt <= 0)
+        {
+          Fail();
+        }
       }
     }
 
