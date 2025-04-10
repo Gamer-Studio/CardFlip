@@ -9,9 +9,9 @@ namespace CardFlip
 {
     public class HiddenBtn : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
-        public float holdTime = 2f; // ¸î ÃÊ ÀÌ»ó ´­·¯¾ß ¹İÀÀÇÒÁö
-        private float holdTimer = 0f;   //ÇöÀç ´­¸° ½Ã°£
-        private bool isHolding = false;     //´­·È´ÂÁö¿¡ ´ëÇÑ ÆÇ´Ü
+        public float holdTime = 2f; // ëª‡ ì´ˆ ì´ìƒ ëˆŒëŸ¬ì•¼ ë°˜ì‘í• ì§€
+        private float holdTimer = 0f;   //í˜„ì¬ ëˆŒë¦° ì‹œê°„
+        private bool isHolding = false;     //ëˆŒë ¸ëŠ”ì§€ì— ëŒ€í•œ íŒë‹¨
 
         void Update()
         {
@@ -20,7 +20,7 @@ namespace CardFlip
                 holdTimer += Time.deltaTime;
                 if (holdTimer >= holdTime)
                 {
-                    isHolding = false; // ´õ ÀÌ»ó ´©¸£°í ÀÖ¾îµµ Ãß°¡ ½ÇÇà ¾È µÇ°Ô
+                    isHolding = false; // ë” ì´ìƒ ëˆ„ë¥´ê³  ìˆì–´ë„ ì¶”ê°€ ì‹¤í–‰ ì•ˆ ë˜ê²Œ
                     EnterHiddenStage();
                 }
             }
