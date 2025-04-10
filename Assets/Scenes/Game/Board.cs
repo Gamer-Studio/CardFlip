@@ -152,21 +152,7 @@ namespace CardFlip
             if (selectedCard == null) selectedCard = card;
             else
             {
-              if (selectedCard.Id == card.Id)
-              {
-                //여기서 match.mp3 재생
-                anim.SetBool("destroy", true);
-                selectedCard.GetComponent<Animator>().SetBool("destroy", true);
-                cardCount -= 2;
-              }
-              else
-              {
-                //여기서 unmatch 사운드 재생
-                selectedCard.GetComponent<Animator>().SetBool("isOpen", false);
-                anim.SetBool("isOpen", false);
-                countText.text = (--remainAttempt).ToString();
-
-              }
+              StartCoroutine(CheckMatch(selectedCard, card)); // 카드가 같은지 비교
               selectedCard = null;
             }
 
@@ -177,5 +163,21 @@ namespace CardFlip
         if (cardCount <= 0) GameOver();
       }
     }
+IEnumerator CheckMatch(Card a, Card b)
+{
+    // 잠깐 대기 후 동시에 닫기
+    yield return new WaitForSeconds(0.5f); // 카드 펼쳐지는 시간만큼 기다려야 자연스러움
+    if(a.Id == b.Id){
+      a.GetComponent<Animator>().SetBool("destroy", true);
+      b.GetComponent<Animator>().SetBool("destroy", true);
+      cardCount -= 2;
+    }
+    else{
+    a.GetComponent<Animator>().SetBool("isOpen", false);
+    b.GetComponent<Animator>().SetBool("isOpen", false);
+    countText.text = (--remainAttempt).ToString();
+    }
+}
+
   }
 }
