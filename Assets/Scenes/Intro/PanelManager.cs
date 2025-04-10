@@ -48,9 +48,5 @@ namespace CardFlip
         canvas.worldCamera = Camera.main;
       };
     }
-
-    private void Start()
-    {
-    }
   }
 }

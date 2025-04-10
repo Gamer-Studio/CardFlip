@@ -59,13 +59,9 @@ namespace CardFlip
 
 
     // 여기서부터 StageSelectPanel 코드
-    public void SelectStage(Stage stageData)
+    public void SelectStage(int index)
     {
-      if (stageData == null)
-      {
-        return;
-      }
-      GameManager.Instance.stageData = stageData;
+      GameManager.Instance.stageIndex = index;
       SceneManager.LoadScene("GameScene");
     }
 

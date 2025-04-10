@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 namespace CardFlip
@@ -8,8 +7,9 @@ namespace CardFlip
   {
     public static GameManager Instance { get; private set; }
     //   여기서는 스테이지 정보 전달받는 변수
-    public Stage stageData = null;
+    public int stageIndex = 0;
     public Dictionary<string, Sprite> sprites = new();
+    public List<Stage> stageDataList = new();
     public new AudioManager audio;
     private void Awake()
     {
