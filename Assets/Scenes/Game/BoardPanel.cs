@@ -16,6 +16,7 @@ namespace CardFlip
 
     private void Success()
     {
+      successPanel.SetActive(true);
       remainAttemptResultText.text = remainAttempt.ToString();
       remainTimeResultText.text = time.ToString("N2");
 
@@ -23,17 +24,12 @@ namespace CardFlip
       var best = PlayerPrefs.GetInt("bestStage", 1);
       if (current >= best) PlayerPrefs.SetInt("bestStage", current + 1);
 
-      nextStageButton.SetActive(current >= GameManager.Instance.stageDataList.Count);
+      nextStageButton.SetActive(current <= GameManager.Instance.stageDataList.Count);
     }
 
     public void Retry()
     {
       SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
-    }
-
-    public void BackToHome()
-    {
-      SceneManager.LoadScene("MenuScene", LoadSceneMode.Single);
     }
 
     public void NextStage()
@@ -48,7 +44,13 @@ namespace CardFlip
 
     private void Fail()
     {
+      finish = true;
       failPanel.SetActive(true);
+    }
+
+    public void BackToMenu()
+    {
+      SceneManager.LoadScene("MenuScene", LoadSceneMode.Single);
     }
   }
 }

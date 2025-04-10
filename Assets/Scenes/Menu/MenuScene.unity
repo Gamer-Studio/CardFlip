@@ -286,11 +286,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1039929904}
         m_TargetAssemblyTypeName: CardFlip.MenuSystem, Assembly-CSharp
         m_MethodName: SelectStage
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 17501556257a4f64c9ba822e0e40a399, type: 2}
-          m_ObjectArgumentAssemblyTypeName: CardFlip.Stage, Assembly-CSharp
-          m_IntArgument: 0
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -466,6 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e469caf71229a43b9e041c45c8ff9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuSystem: {fileID: 1039929904}
   holdTime: 2
 --- !u!1 &351698261
 GameObject:
@@ -630,11 +631,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1039929904}
         m_TargetAssemblyTypeName: CardFlip.MenuSystem, Assembly-CSharp
         m_MethodName: SelectStage
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 96c077d77f600924587e962730385623, type: 2}
-          m_ObjectArgumentAssemblyTypeName: CardFlip.Stage, Assembly-CSharp
-          m_IntArgument: 0
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1096,11 +1097,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1039929904}
         m_TargetAssemblyTypeName: CardFlip.MenuSystem, Assembly-CSharp
         m_MethodName: SelectStage
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 491a5fb94860e9644bd7e20efaeae782, type: 2}
-          m_ObjectArgumentAssemblyTypeName: CardFlip.Stage, Assembly-CSharp
-          m_IntArgument: 0
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1229,10 +1230,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1039929904}
         m_TargetAssemblyTypeName: CardFlip.MenuSystem, Assembly-CSharp
         m_MethodName: SelectStage
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: a48163a5b93420b4faff5e203ba5f6f9, type: 2}
-          m_ObjectArgumentAssemblyTypeName: CardFlip.Stage, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2927,7 +2928,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2121776936}
   - component: {fileID: 2121776937}
-  - component: {fileID: 2121776939}
   - component: {fileID: 2121776940}
   m_Layer: 5
   m_Name: MenuPanel
@@ -2979,22 +2979,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2121776939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121776935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac1a03816f2e750409ff2dfcc6ef5a15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  MenuPanel: {fileID: 0}
-  stageSelectPanel: {fileID: 0}
-  stageButtons: []
 --- !u!114 &2121776940
 MonoBehaviour:
   m_ObjectHideFlags: 0

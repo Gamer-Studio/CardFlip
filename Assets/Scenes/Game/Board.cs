@@ -38,12 +38,13 @@ namespace CardFlip
     // 남은 시도횟수
     private int remainAttempt;
 
-    private bool isStarted = false;
+    private bool isStarted = false, finish = false;
 
     private void Awake()
     {
       if (Instance == null) Instance = this;
       stageData = GameManager.Instance.stageDataList[GameManager.Instance.stageIndex];
+      time = stageData.timeLimit;
       timeText.text = time.ToString("N2");
       remainAttempt = stageData.remainAttempt;
     }
@@ -54,10 +55,15 @@ namespace CardFlip
       StartCoroutine(CardSettingComplete());
     }
 
+    private AudioManager AudioManager => GameManager.Instance.audio;
+
     private void Update()
     {
       if (isStarted)
       {
+        if (time < 10 && !finish) AudioManager.Bgm.pitch = 2f;
+        else AudioManager.Bgm.pitch = 1f;
+
         if (time > 0) // 0초가 아닐 때
         {
           time -= Time.deltaTime; // 시간 감소
@@ -66,7 +72,7 @@ namespace CardFlip
         else
         {
           timeText.text = 0f.ToString("N2"); // 끝나면 화면에 0초로 표시
-          GameOver();
+          if (!finish) GameOver();
         }
       }
     }
@@ -100,8 +106,7 @@ namespace CardFlip
 
     public void GameOver()
     {
-      endText.SetActive(true);
-      Time.timeScale = 0;
+      Fail();
     }
 
     public Card SetCard(int id, Vector3Int position)
@@ -154,6 +159,12 @@ namespace CardFlip
             {
               StartCoroutine(CheckMatch(selectedCard, card)); // 카드가 같은지 비교
               selectedCard = null;
+              Debug.Log(cardCount);
+              if (cardCount <= 2)
+              {
+                finish = true;
+                Success();
+              }
             }
 
             break;
@@ -163,21 +174,24 @@ namespace CardFlip
         if (cardCount <= 0) GameOver();
       }
     }
-IEnumerator CheckMatch(Card a, Card b)
-{
-    // 잠깐 대기 후 동시에 닫기
-    yield return new WaitForSeconds(0.5f); // 카드 펼쳐지는 시간만큼 기다려야 자연스러움
-    if(a.Id == b.Id){
-      a.GetComponent<Animator>().SetBool("destroy", true);
-      b.GetComponent<Animator>().SetBool("destroy", true);
-      cardCount -= 2;
+
+    private IEnumerator CheckMatch(Card a, Card b)
+    {
+      // 잠깐 대기 후 동시에 닫기
+      yield return new WaitForSeconds(0.5f); // 카드 펼쳐지는 시간만큼 기다려야 자연스러움
+      if (a.Id == b.Id)
+      {
+        a.GetComponent<Animator>().SetBool("destroy", true);
+        b.GetComponent<Animator>().SetBool("destroy", true);
+        cardCount -= 2;
+      }
+      else
+      {
+        a.GetComponent<Animator>().SetBool("isOpen", false);
+        b.GetComponent<Animator>().SetBool("isOpen", false);
+        countText.text = (--remainAttempt).ToString();
+      }
     }
-    else{
-    a.GetComponent<Animator>().SetBool("isOpen", false);
-    b.GetComponent<Animator>().SetBool("isOpen", false);
-    countText.text = (--remainAttempt).ToString();
-    }
-}
 
   }
 }

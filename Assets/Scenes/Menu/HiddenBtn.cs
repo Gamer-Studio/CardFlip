@@ -9,11 +9,12 @@ namespace CardFlip
 {
     public class HiddenBtn : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
+        public MenuSystem menuSystem;
         public float holdTime = 2f; // 몇 초 이상 눌러야 반응할지
         private float holdTimer = 0f;   //현재 눌린 시간
         private bool isHolding = false;     //눌렸는지에 대한 판단
 
-        void Update()
+        private void Update()
         {
             if (isHolding)
             {
@@ -40,7 +41,7 @@ namespace CardFlip
 
         void EnterHiddenStage()
         {
-            SceneManager.LoadScene("GameScene");
+            menuSystem.SelectStage(4);
         }
     }
 }
