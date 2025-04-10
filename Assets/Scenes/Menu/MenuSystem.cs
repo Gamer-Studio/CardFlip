@@ -18,7 +18,7 @@ namespace CardFlip
 
     public void ExitGame()
     {
-
+      Application.Quit();
     }
   }
 }
