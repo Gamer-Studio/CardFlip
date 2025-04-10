@@ -6,6 +6,8 @@ namespace CardFlip
 {
   public class AudioManager : MonoBehaviour
   {
+    public AudioSource Bgm => bgmSource;
+    public AudioSource Effect => effectSource;
     // 0~100 값을 가질 수 있는 전역 볼륨 프로퍼티입니다.
     // 기본값은 80입니다.
     public float globalVolume
@@ -54,10 +56,11 @@ namespace CardFlip
     [SerializeField]
     private AudioMixer audioMixer;
 
+    [SerializeField]
+    private AudioSource bgmSource, effectSource;
     private void Start()
     {
       globalVolume = PlayerPrefs.GetFloat("globalVolume", 80f);
-      Debug.Log(PlayerPrefs.GetFloat("globalVolume", 80f));
       bgmVolume = PlayerPrefs.GetFloat("bgmVolume", 80f);
       effectVolume = PlayerPrefs.GetFloat("effectVolume", 100f);
     }

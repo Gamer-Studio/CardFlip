@@ -1316,6 +1316,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 2af41eb675736cf4ba353edfac1bb345, type: 2}
+  bgmSource: {fileID: 1020031997}
+  effectSource: {fileID: 1604197933}
 --- !u!4 &596403391
 Transform:
   m_ObjectHideFlags: 0
@@ -2260,7 +2262,7 @@ GameObject:
   - component: {fileID: 1020031996}
   - component: {fileID: 1020031997}
   m_Layer: 5
-  m_Name: GlobalSource
+  m_Name: BgmSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

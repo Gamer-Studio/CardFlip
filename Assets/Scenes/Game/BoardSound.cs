@@ -11,7 +11,7 @@ namespace CardFlip
       {
         var pos = camera.ScreenToWorldPoint(Input.mousePosition);
         var hits = Physics2D.RaycastAll(pos, Vector2.zero, 0f);
-        
+
         foreach (var hit in hits)
         {
           if (hit.collider.TryGetComponent<Card>(out var card) && card != selectedCard && !card.destroy)
@@ -36,6 +36,7 @@ namespace CardFlip
                 //여기서 unmatch 사운드 재생
                 selectedCard.GetComponent<Animator>().SetBool("isOpen", false);
                 anim.SetBool("isOpen", false);
+                countText.text = (--remainAttempt).ToString();
 
               }
               selectedCard = null;

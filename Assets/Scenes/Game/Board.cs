@@ -26,23 +26,23 @@ namespace CardFlip
     private GameObject endText;
     [SerializeField]
     private TextMeshProUGUI timeText;
+    // 남은기회 txt
     [SerializeField]
-    private Text count; // 남은기회 txt
-    
+    private TextMeshProUGUI countText;
+
     private int cardOrder = 0;
     private float timeWait = 0.07f;
     private float time = 30.0f;
-    private int Pair; // Stage.cs의 pair 변수를 저장하기 위해 만듬
-    private int RemainAttempt; // Stage.cs의 remainAttempt 변수를 저장하기 위해 만듬
-    
+    // 남은 시도횟수
+    private int remainAttempt;
+
     private bool isStarted = false;
 
     private void Awake()
     {
       if (Instance == null) Instance = this;
-      Pair = GameManager.Instance.stageData.pair; // Stage.cs에서 pair 변수 가져옴
-      RemainAttempt = GameManager.Instance.stageData.remainAttempt; // Stage.cs에서서 remainAttempt 변수 가져옴
       timeText.text = time.ToString("N2");
+      remainAttempt = GameManager.Instance.stageData.remainAttempt;
     }
 
     private void Start()
@@ -52,59 +52,55 @@ namespace CardFlip
     }
 
     private void Update()
-    { 
-      if(isStarted){
+    {
+      if (isStarted)
+      {
         if (time > 0) // 0초가 아닐 때
-       {
+        {
           time -= Time.deltaTime; // 시간 감소
           timeText.text = time.ToString("N2");
         }
         else
         {
-           timeText.text = 0f.ToString("N2"); // 끝나면 화면에 0초로 표시
-           GameOver();
+          timeText.text = 0f.ToString("N2"); // 끝나면 화면에 0초로 표시
+          GameOver();
         }
       }
     }
 
     private void StartGame()
     {
+      var stageData = GameManager.Instance.stageData;
+
       var sizeX = 4;
-    var sizeY = Pair / 2;
+      var sizeY = stageData.pair / 2;
       var list = new List<int>();
 
-      for (int i = 0; i < Pair; i++)
+      for (int i = 0; i < stageData.pair; i++)
       {
         list.Add(i);
         list.Add(i);
       }
       var arr = list.OrderBy(_ => Random.Range(0, 7)).ToArray();
-    int index = 0;
-    for (int y = 0; y < sizeY; y++)
-    {
+      int index = 0;
+      for (int y = 0; y < sizeY; y++)
+      {
         for (int x = 0; x < sizeX; x++)
         {
-            if (index >= arr.Length) break;
+          if (index >= arr.Length) break;
 
-            SetCard(arr[index], new Vector3Int(x, y));
-            index++;
+          SetCard(arr[index], new Vector3Int(x, y));
+          index++;
         }
-    }
+      }
       cardCount = arr.Length;
-      count.text = RemainAttempt.ToString(); // 화면에 출력
+      countText.text = remainAttempt.ToString(); // 화면에 출력
     }
 
     public void GameOver()
     {
       endText.SetActive(true);
       Time.timeScale = 0;
-    }
-
-    public void Retry()
-    {
-      Time.timeScale = 1;
-      SceneManager.LoadScene("MainScene");
-      RemainAttempt -= 1; // 재시작시 남은기회 -1
     }
 
     public Card SetCard(int id, Vector3Int position)
@@ -129,9 +125,10 @@ namespace CardFlip
       }
     }
 
-    IEnumerator CardSettingComplete(){
+    private IEnumerator CardSettingComplete()
+    {
       //yield return new WaitForSeconds(timeWait * cardOrder);
-      yield return new WaitForSeconds(timeWait * Pair*2);
+      yield return new WaitForSeconds(timeWait * GameManager.Instance.stageData.pair * 2);
       isStarted = true;
     }
   }
