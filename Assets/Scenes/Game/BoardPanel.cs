@@ -14,7 +14,8 @@ namespace CardFlip
 
     private void Success()
     {
-      remainAttemptResultText.text = time.ToString("N2");
+      remainAttemptResultText.text = remainAttempt.ToString();
+      remainTimeResultText.text = time.ToString("N2");
     }
 
     // failPanel 구현
