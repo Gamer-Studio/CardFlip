@@ -435,6 +435,7 @@ GameObject:
   - component: {fileID: 295199718}
   - component: {fileID: 295199717}
   - component: {fileID: 295199716}
+  - component: {fileID: 295199719}
   m_Layer: 5
   m_Name: PausePanel
   m_TagString: Untagged
@@ -503,6 +504,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &295199719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295199715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ff965fbfcd81b4396ee6e26669f2f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &353625337
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +528,6 @@ GameObject:
   - component: {fileID: 353625343}
   - component: {fileID: 353625342}
   - component: {fileID: 353625341}
-  - component: {fileID: 353625340}
   - component: {fileID: 353625339}
   m_Layer: 5
   m_Name: MainMenuBtn
@@ -559,18 +571,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
---- !u!114 &353625340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353625337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3053529dd73550442ab66dcd7196a8b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &353625341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -615,9 +615,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 353625340}
-        m_TargetAssemblyTypeName: CardFlip.MainMenuBtn, Assembly-CSharp
-        m_MethodName: MainMenu
+      - m_Target: {fileID: 295199719}
+        m_TargetAssemblyTypeName: CardFlip.PausePanel, Assembly-CSharp
+        m_MethodName: GotoMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1046,7 +1046,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -82.22222}
+  m_AnchoredPosition: {x: 250, y: -82.22223}
   m_SizeDelta: {x: 500, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &527866480
@@ -2389,7 +2389,6 @@ GameObject:
   - component: {fileID: 1067234623}
   - component: {fileID: 1067234622}
   - component: {fileID: 1067234621}
-  - component: {fileID: 1067234620}
   - component: {fileID: 1067234619}
   m_Layer: 5
   m_Name: ContinueBtn
@@ -2433,18 +2432,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
---- !u!114 &1067234620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067234617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d3f5463dfa8322488e310cd74788ae5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1067234621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2489,9 +2476,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1067234620}
-        m_TargetAssemblyTypeName: CardFlip.ContinueBtn, Assembly-CSharp
-        m_MethodName: ReturnGame
+      - m_Target: {fileID: 295199719}
+        m_TargetAssemblyTypeName: CardFlip.PausePanel, Assembly-CSharp
+        m_MethodName: Continue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3042,7 +3029,6 @@ GameObject:
   - component: {fileID: 1265804581}
   - component: {fileID: 1265804580}
   - component: {fileID: 1265804579}
-  - component: {fileID: 1265804578}
   m_Layer: 5
   m_Name: SettingBtn
   m_TagString: Untagged
@@ -3070,18 +3056,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -100}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1265804578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1265804576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b85067b47a8f00e4a8c221dc7fe20b12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1265804579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3141,9 +3115,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1265804578}
-        m_TargetAssemblyTypeName: CardFlip.SettingBtn, Assembly-CSharp
-        m_MethodName: Setting
+      - m_Target: {fileID: 295199719}
+        m_TargetAssemblyTypeName: CardFlip.PausePanel, Assembly-CSharp
+        m_MethodName: OpenSetting
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

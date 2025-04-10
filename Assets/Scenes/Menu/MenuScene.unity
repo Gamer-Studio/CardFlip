@@ -210,7 +210,6 @@ GameObject:
   - component: {fileID: 61198576}
   - component: {fileID: 61198575}
   - component: {fileID: 61198574}
-  - component: {fileID: 61198577}
   m_Layer: 5
   m_Name: Stage4Button
   m_TagString: Untagged
@@ -284,13 +283,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 61198577}
-        m_TargetAssemblyTypeName: CardFlip.StageSelectBtn, Assembly-CSharp
-        m_MethodName: StageSelect
-        m_Mode: 1
+      - m_Target: {fileID: 1039929904}
+        m_TargetAssemblyTypeName: CardFlip.MenuSystem, Assembly-CSharp
+        m_MethodName: SelectStage
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 17501556257a4f64c9ba822e0e40a399, type: 2}
+          m_ObjectArgumentAssemblyTypeName: CardFlip.Stage, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -334,19 +333,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61198572}
   m_CullTransparentMesh: 1
---- !u!114 &61198577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 61198572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd8d1e9bb8484694ead402fd57f8a128, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: 17501556257a4f64c9ba822e0e40a399, type: 2}
 --- !u!1 &242104256
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,8 +369,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 450}
-  m_SizeDelta: {x: 200, y: 200}
+  m_AnchoredPosition: {x: 6.5, y: -440}
+  m_SizeDelta: {x: 620, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &242104258
 MonoBehaviour:
@@ -568,7 +554,6 @@ GameObject:
   - component: {fileID: 360747305}
   - component: {fileID: 360747304}
   - component: {fileID: 360747303}
-  - component: {fileID: 360747306}
   m_Layer: 5
   m_Name: Stage2Button
   m_TagString: Untagged
@@ -642,13 +627,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 360747306}
-        m_TargetAssemblyTypeName: CardFlip.StageSelectBtn, Assembly-CSharp
-        m_MethodName: StageSelect
-        m_Mode: 1
+      - m_Target: {fileID: 1039929904}
+        m_TargetAssemblyTypeName: CardFlip.MenuSystem, Assembly-CSharp
+        m_MethodName: SelectStage
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 96c077d77f600924587e962730385623, type: 2}
+          m_ObjectArgumentAssemblyTypeName: CardFlip.Stage, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -692,19 +677,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360747301}
   m_CullTransparentMesh: 1
---- !u!114 &360747306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360747301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd8d1e9bb8484694ead402fd57f8a128, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: 96c077d77f600924587e962730385623, type: 2}
 --- !u!1 &418968294
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,7 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1048,7 +1020,6 @@ GameObject:
   - component: {fileID: 761182469}
   - component: {fileID: 761182468}
   - component: {fileID: 761182467}
-  - component: {fileID: 761182470}
   m_Layer: 5
   m_Name: Stage3Button
   m_TagString: Untagged
@@ -1122,13 +1093,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 761182470}
-        m_TargetAssemblyTypeName: CardFlip.StageSelectBtn, Assembly-CSharp
-        m_MethodName: StageSelect
-        m_Mode: 1
+      - m_Target: {fileID: 1039929904}
+        m_TargetAssemblyTypeName: CardFlip.MenuSystem, Assembly-CSharp
+        m_MethodName: SelectStage
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 491a5fb94860e9644bd7e20efaeae782, type: 2}
+          m_ObjectArgumentAssemblyTypeName: CardFlip.Stage, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1172,19 +1143,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761182465}
   m_CullTransparentMesh: 1
---- !u!114 &761182470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761182465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd8d1e9bb8484694ead402fd57f8a128, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: 491a5fb94860e9644bd7e20efaeae782, type: 2}
 --- !u!1 &797175690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,7 +1155,6 @@ GameObject:
   - component: {fileID: 797175694}
   - component: {fileID: 797175693}
   - component: {fileID: 797175692}
-  - component: {fileID: 797175695}
   m_Layer: 5
   m_Name: Stage1Button
   m_TagString: Untagged
@@ -1269,13 +1226,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 797175695}
-        m_TargetAssemblyTypeName: CardFlip.StageSelectBtn, Assembly-CSharp
-        m_MethodName: StageSelect
-        m_Mode: 1
+      - m_Target: {fileID: 1039929904}
+        m_TargetAssemblyTypeName: CardFlip.MenuSystem, Assembly-CSharp
+        m_MethodName: SelectStage
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: a48163a5b93420b4faff5e203ba5f6f9, type: 2}
+          m_ObjectArgumentAssemblyTypeName: CardFlip.Stage, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1319,19 +1276,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797175690}
   m_CullTransparentMesh: 1
---- !u!114 &797175695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797175690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd8d1e9bb8484694ead402fd57f8a128, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: a48163a5b93420b4faff5e203ba5f6f9, type: 2}
 --- !u!1 &855247548
 GameObject:
   m_ObjectHideFlags: 0
@@ -1651,10 +1595,10 @@ RectTransform:
   - {fileID: 875074547}
   m_Father: {fileID: 2121776936}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -120}
-  m_SizeDelta: {x: 300, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1018337284
 MonoBehaviour:
@@ -1700,13 +1644,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1018337282}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1039929904}
+        m_TargetAssemblyTypeName: CardFlip.MenuSystem, Assembly-CSharp
+        m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1760,7 +1704,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1039929902}
   - component: {fileID: 1039929901}
-  - component: {fileID: 1039929900}
+  - component: {fileID: 1039929903}
+  - component: {fileID: 1039929904}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1768,26 +1713,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1039929900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1039929899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &1039929901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1818,6 +1743,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1039929903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039929899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
+--- !u!114 &1039929904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039929899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1a03816f2e750409ff2dfcc6ef5a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 2121776937}
+  MenuPanel: {fileID: 2121776935}
+  stageSelectPanel: {fileID: 1869546070}
+  stageButtons:
+  - {fileID: 360747301}
+  - {fileID: 761182465}
+  - {fileID: 61198572}
 --- !u!1 &1043466737
 GameObject:
   m_ObjectHideFlags: 0
@@ -1830,7 +1804,6 @@ GameObject:
   - component: {fileID: 1043466741}
   - component: {fileID: 1043466740}
   - component: {fileID: 1043466739}
-  - component: {fileID: 1043466742}
   m_Layer: 5
   m_Name: SettingButton
   m_TagString: Untagged
@@ -1853,10 +1826,10 @@ RectTransform:
   - {fileID: 1627568374}
   m_Father: {fileID: 2121776936}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 100}
+  m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1043466739
 MonoBehaviour:
@@ -1902,9 +1875,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1043466742}
-        m_TargetAssemblyTypeName: CardFlip.SettingButn, Assembly-CSharp
-        m_MethodName: Setting
+      - m_Target: {fileID: 1039929904}
+        m_TargetAssemblyTypeName: CardFlip.MenuSystem, Assembly-CSharp
+        m_MethodName: OpenSetting
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1952,18 +1925,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043466737}
   m_CullTransparentMesh: 1
---- !u!114 &1043466742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1043466737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ccc914a1a829d94399e64c69eb9122f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1316334278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,11 +1958,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1722767747}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 100}
-  m_Pivot: {x: 1, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1316334280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2395,7 +2356,6 @@ GameObject:
   - component: {fileID: 1722767750}
   - component: {fileID: 1722767749}
   - component: {fileID: 1722767748}
-  - component: {fileID: 1722767751}
   m_Layer: 5
   m_Name: StageSelectButton
   m_TagString: Untagged
@@ -2418,10 +2378,10 @@ RectTransform:
   - {fileID: 1316334279}
   m_Father: {fileID: 2121776936}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 120}
-  m_SizeDelta: {x: 300, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1722767748
 MonoBehaviour:
@@ -2467,9 +2427,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1722767751}
-        m_TargetAssemblyTypeName: CardFlip.SelectBtn, Assembly-CSharp
-        m_MethodName: SelectActive
+      - m_Target: {fileID: 1039929904}
+        m_TargetAssemblyTypeName: CardFlip.MenuSystem, Assembly-CSharp
+        m_MethodName: OpenSelectPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2517,25 +2477,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722767746}
   m_CullTransparentMesh: 1
---- !u!114 &1722767751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722767746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccd6312641e03a949abf4c5835c15a71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 2121776937}
-  MenuPanel: {fileID: 2121776935}
-  stageSelectPanel: {fileID: 1869546070}
-  stageButtons:
-  - {fileID: 360747301}
-  - {fileID: 761182465}
-  - {fileID: 61198572}
 --- !u!1 &1869546070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2855,7 +2796,6 @@ GameObject:
   - component: {fileID: 2093772529}
   - component: {fileID: 2093772528}
   - component: {fileID: 2093772527}
-  - component: {fileID: 2093772530}
   m_Layer: 5
   m_Name: Quit 2
   m_TagString: Untagged
@@ -2927,9 +2867,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2093772530}
-        m_TargetAssemblyTypeName: CardFlip.SelectBtn, Assembly-CSharp
-        m_MethodName: BacktoMenu
+      - m_Target: {fileID: 1039929904}
+        m_TargetAssemblyTypeName: CardFlip.MenuSystem, Assembly-CSharp
+        m_MethodName: OpenMenuPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2977,22 +2917,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093772524}
   m_CullTransparentMesh: 1
---- !u!114 &2093772530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093772524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccd6312641e03a949abf4c5835c15a71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 2121776937}
-  MenuPanel: {fileID: 2121776935}
-  stageSelectPanel: {fileID: 1869546070}
-  stageButtons: []
 --- !u!1 &2121776935
 GameObject:
   m_ObjectHideFlags: 0
@@ -3003,6 +2927,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2121776936}
   - component: {fileID: 2121776937}
+  - component: {fileID: 2121776939}
+  - component: {fileID: 2121776940}
   m_Layer: 5
   m_Name: MenuPanel
   m_TagString: Untagged
@@ -3030,7 +2956,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 400, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2121776937
 Animator:
@@ -3053,6 +2979,48 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2121776939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121776935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1a03816f2e750409ff2dfcc6ef5a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  MenuPanel: {fileID: 0}
+  stageSelectPanel: {fileID: 0}
+  stageButtons: []
+--- !u!114 &2121776940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121776935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

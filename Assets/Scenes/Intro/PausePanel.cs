@@ -19,6 +19,7 @@ namespace CardFlip
 
     public void GotoMenu()
     {
+      PanelManager.Instance.OpenPause = false;
       SceneManager.LoadScene("MenuScene", LoadSceneMode.Single);
     }
   }
