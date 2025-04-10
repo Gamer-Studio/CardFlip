@@ -22,7 +22,6 @@ namespace CardFlip
     {
       MenuPanel.SetActive(false);
       stageSelectPanel.SetActive(true);
-
       // nameof로 키를 변수의 이름으로 사용하게 했어요.
       // 두번째 매개변수로 해당 값이 저장되어있지않을 때 가져올 값을 정의했어요.
       bestStage = PlayerPrefs.GetInt(bestStageName, 1);
@@ -32,7 +31,7 @@ namespace CardFlip
       {
         var btnObj = stageButtons[i];
 
-        bool isCleared = (i + 2) <= bestStage;
+        bool isCleared = (i + 1) < bestStage;
         btnObj.SetActive(true);
 
         var lockIcon = btnObj.transform.Find("LockIcon");

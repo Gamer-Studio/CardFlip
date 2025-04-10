@@ -22,7 +22,7 @@ namespace CardFlip
 
       var current = GameManager.Instance.stageIndex;
       var best = PlayerPrefs.GetInt("bestStage", 1);
-      if (current >= best - 1) PlayerPrefs.SetInt("bestStage", current + 1);
+      if (current >= best - 1) PlayerPrefs.SetInt("bestStage", ++best);
 
       nextStageButton.SetActive(current <= GameManager.Instance.stageDataList.Count);
     }
