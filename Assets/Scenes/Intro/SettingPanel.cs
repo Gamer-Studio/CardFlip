@@ -9,7 +9,7 @@ namespace CardFlip
     private Slider globalSoundSlider, bgmSoundSlider, effectSoundSlider;
     private void OnEnable()
     {
-      Debug.Log("load");
+      Debug.Log(PlayerPrefs.GetFloat("globalVolume", 80f));
       globalSoundSlider.value = PlayerPrefs.GetFloat("globalVolume", 80f);
       bgmSoundSlider.value = PlayerPrefs.GetFloat("bgmVolume", 80f);
       effectSoundSlider.value = PlayerPrefs.GetFloat("effectVolume", 100f);
@@ -30,7 +30,7 @@ namespace CardFlip
 
     public void ChangeBackgroundSound(float value)
     {
-      GameManager.Instance.audio.BgmVolume = value;
+      GameManager.Instance.audio.bgmVolume = value;
     }
 
     public void ChangeEffectSound(float value)

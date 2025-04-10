@@ -23,7 +23,7 @@ namespace CardFlip
 
     // 0~100값을 가질 수 있는 배경음음 볼륨 프로퍼티입니다.
     // 기본값은 80입니다.
-    public float BgmVolume
+    public float bgmVolume
     {
       get
       {
@@ -54,11 +54,12 @@ namespace CardFlip
     [SerializeField]
     private AudioMixer audioMixer;
 
-    private void Awake()
+    private void Start()
     {
-      globalVolume = PlayerPrefs.GetFloat("globalVolume", 80f) - 80f;
-      globalVolume = PlayerPrefs.GetFloat("bgmVolume", 80f) - 80f;
-      effectVolume = PlayerPrefs.GetFloat("effectVolume", 100f) - 80f;
+      globalVolume = PlayerPrefs.GetFloat("globalVolume", 80f);
+      Debug.Log(PlayerPrefs.GetFloat("globalVolume", 80f));
+      bgmVolume = PlayerPrefs.GetFloat("bgmVolume", 80f);
+      effectVolume = PlayerPrefs.GetFloat("effectVolume", 100f);
     }
   }
 }
