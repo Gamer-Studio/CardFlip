@@ -11,7 +11,7 @@ namespace CardFlip
       {
         var pos = camera.ScreenToWorldPoint(Input.mousePosition);
         var hits = Physics2D.RaycastAll(pos, Vector2.zero, 0f);
-
+        
         foreach (var hit in hits)
         {
           if (hit.collider.TryGetComponent<Card>(out var card) && card != selectedCard && !card.destroy)

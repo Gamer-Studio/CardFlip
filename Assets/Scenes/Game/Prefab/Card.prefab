@@ -311,6 +311,7 @@ MonoBehaviour:
   destroy: 0
   renderer: {fileID: 1068210728743972987}
   animator: {fileID: 9101005611605387114}
+  order: 0
 --- !u!95 &9101005611605387114
 Animator:
   serializedVersion: 5
@@ -339,7 +340,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4748693815338454513}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -29,33 +30,40 @@ namespace CardFlip
     private Text count; // 남은기회 txt
     
     private int cardOrder = 0;
+    private float timeWait = 0.07f;
     private float time = 30.0f;
     private int Pair; // Stage.cs의 pair 변수를 저장하기 위해 만듬
     private int RemainAttempt; // Stage.cs의 remainAttempt 변수를 저장하기 위해 만듬
     
+    private bool isStarted = false;
+
     private void Awake()
     {
       if (Instance == null) Instance = this;
       Pair = GameManager.Instance.stageData.pair; // Stage.cs에서 pair 변수 가져옴
       RemainAttempt = GameManager.Instance.stageData.remainAttempt; // Stage.cs에서서 remainAttempt 변수 가져옴
+      timeText.text = time.ToString("N2");
     }
 
     private void Start()
     {
       StartGame();
+      StartCoroutine(CardSettingComplete());
     }
 
     private void Update()
     { 
-      if (time > 0) // 0초가 아닐 때
-      {
-        time -= Time.deltaTime; // 시간 감소
-        timeText.text = time.ToString("N2");
-      }
-      else
-      {
-        timeText.text = 0f.ToString("N2"); // 끝나면 화면에 0초로 표시
-        GameOver();
+      if(isStarted){
+        if (time > 0) // 0초가 아닐 때
+       {
+          time -= Time.deltaTime; // 시간 감소
+          timeText.text = time.ToString("N2");
+        }
+        else
+        {
+           timeText.text = 0f.ToString("N2"); // 끝나면 화면에 0초로 표시
+           GameOver();
+        }
       }
     }
 
@@ -69,26 +77,15 @@ namespace CardFlip
         list.Add(i);
         list.Add(i);
       }
-      var arr = list.OrderBy(_ => Random.Range(0, 7)).ToArray();
+      var arr = list.OrderBy(_ => Random.Range(0, Pair)).ToArray();
       
       for (int x = 0; x < size; x++)
       {
         for (int y = 0; y < (Pair / 2); y++) // y축 개수는 pair의 반
         {
-          for(int z = 0; z < size; z++)
-          {
-            if (arr[z] != -1) // 배열 안에 값이 있을 때때
-            {
-              SetCard(arr[x + y * size], new(x, y)); // 배열 안에 값이 존재할 때 카드생성
-            }
-            else
-            {
-              arr[z] = -1; // 배열의 남은 공간을 -1로 채움
-            }
-          }
+              SetCard(arr[x + y], new(x, y)); // 배열 안에 값이 존재할 때 카드생성
         }
       }
-
       cardCount = arr.Length;
       count.text = RemainAttempt.ToString(); // 화면에 출력
     }
@@ -112,6 +109,7 @@ namespace CardFlip
       var obj = grid.GetInstantiatedObject(position);
       obj.GetComponent<Card>().Id = id;
       obj.GetComponent<Card>().order = cardOrder;
+      obj.GetComponent<Card>().timeWait = timeWait; // 카드 배치 시간
       cardOrder++;
 
       return obj.GetComponent<Card>();
@@ -125,6 +123,12 @@ namespace CardFlip
         card = null;
         return false;
       }
+    }
+
+    IEnumerator CardSettingComplete(){
+      //yield return new WaitForSeconds(timeWait * cardOrder);
+      yield return new WaitForSeconds(timeWait * Pair*2);
+      isStarted = true;
     }
   }
 }
