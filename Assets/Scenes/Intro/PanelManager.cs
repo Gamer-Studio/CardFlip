@@ -22,6 +22,8 @@ namespace CardFlip
       get => pausePanel.activeSelf;
       set
       {
+        if (value) Time.timeScale = 0;
+        else Time.timeScale = 1;
         pausePanel.SetActive(value);
         OnOpen.Invoke(PanelType.Pause, value);
       }

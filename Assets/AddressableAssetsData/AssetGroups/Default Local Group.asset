@@ -120,7 +120,7 @@ MonoBehaviour:
     - card
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fc3b3007ecabd9643a5d277d91087115
-    m_Address: Assets/Arts/Sounds/match.mp3
+    m_Address: Assets/Arts/Sounds/Match.mp3
     m_ReadOnly: 0
     m_SerializedLabels:
     - efffect
