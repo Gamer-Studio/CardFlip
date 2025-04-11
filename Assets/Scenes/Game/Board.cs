@@ -76,12 +76,10 @@ namespace CardFlip
         }
       }
 
-#if UNITY_ANDROID
       if (Input.GetKeyDown(KeyCode.Escape))
       {
         PanelManager.Instance.OpenPause = true;
       }
-#endif
     }
 
     private void StartGame()
