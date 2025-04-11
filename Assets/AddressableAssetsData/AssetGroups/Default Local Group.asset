@@ -119,6 +119,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - card
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc3b3007ecabd9643a5d277d91087115
+    m_Address: Assets/Arts/Sounds/match.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - efffect
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a07181001df794a43943b145256cf383
+    m_Address: Assets/Arts/Sounds/UnMatch.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - efffect
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 38c21cd6211a94341ae02ca5ccf7f67e, type: 2}
   m_SchemaSet:

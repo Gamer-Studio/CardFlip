@@ -9,6 +9,7 @@ namespace CardFlip
     //   여기서는 스테이지 정보 전달받는 변수
     public int stageIndex = 0;
     public Dictionary<string, Sprite> sprites = new();
+    public Dictionary<string, AudioClip> sounds = new();
     public List<Stage> stageDataList = new();
     public new AudioManager audio;
     private void Awake()

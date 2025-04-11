@@ -64,5 +64,10 @@ namespace CardFlip
       bgmVolume = PlayerPrefs.GetFloat("bgmVolume", 80f);
       effectVolume = PlayerPrefs.GetFloat("effectVolume", 100f);
     }
+
+    public void PlayEffect(string key)
+    {
+      effectSource.PlayOneShot(GameManager.Instance.sounds[key]);
+    }
   }
 }

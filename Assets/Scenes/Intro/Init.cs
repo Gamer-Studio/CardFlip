@@ -11,14 +11,20 @@ namespace CardFlip
     [SerializeField]
     private TMP_Text introText;
     [SerializeField]
-    private AssetLabelReference rtanRef;
+    private AssetLabelReference spriteRef, soundRef;
     private void Start()
     {
       // 초기화 스크립트에서 어드레서블 에셋 로딩하기기
       var sprites = GameManager.Instance.sprites;
-      Addressables.LoadAssetsAsync<Sprite>(rtanRef, sprite =>
+      Addressables.LoadAssetsAsync<Sprite>(spriteRef, sprite =>
       {
         sprites.Add(sprite.name, sprite);
+      }).WaitForCompletion();
+
+      var sounds = GameManager.Instance.sounds;
+      Addressables.LoadAssetsAsync<AudioClip>(soundRef, sound =>
+      {
+        sounds.Add(sound.name, sound);
       }).WaitForCompletion();
 
       // 게임 로딩을 완료했을 때 텍스트를 바꾸고 터치시 게임 진입 구현

@@ -1176,7 +1176,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!224 &527866486
 RectTransform:
@@ -4277,8 +4277,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loaded: 0
   introText: {fileID: 976183824}
-  rtanRef:
+  spriteRef:
     m_LabelString: card
+  soundRef:
+    m_LabelString: efffect
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
