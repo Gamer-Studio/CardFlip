@@ -178,12 +178,14 @@ namespace CardFlip
       yield return new WaitForSeconds(0.5f); // 카드 펼쳐지는 시간만큼 기다려야 자연스러움
       if (a.Id == b.Id)
       {
+        GameManager.Instance.audio.PlayEffect("Match");
         a.GetComponent<Animator>().SetBool("destroy", true);
         b.GetComponent<Animator>().SetBool("destroy", true);
         cardCount -= 2;
       }
       else
       {
+        GameManager.Instance.audio.PlayEffect("UnMatch");
         a.GetComponent<Animator>().SetBool("isOpen", false);
         b.GetComponent<Animator>().SetBool("isOpen", false);
         countText.text = (--remainAttempt).ToString();
