@@ -165,14 +165,8 @@ namespace CardFlip
                 Success();
               }
             }
-
             break;
           }
-        }
-
-        if (remainAttempt <= 0)
-        {
-          Fail();
         }
       }
     }
@@ -194,6 +188,10 @@ namespace CardFlip
         a.GetComponent<Animator>().SetBool("isOpen", false);
         b.GetComponent<Animator>().SetBool("isOpen", false);
         countText.text = (--remainAttempt).ToString();
+        if (remainAttempt <= 0)
+        {
+          Fail();
+        }
       }
     }
 
